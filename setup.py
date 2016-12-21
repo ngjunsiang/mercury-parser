@@ -24,12 +24,13 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 required = [
-    'requests'
+    'requests',
+    'maya'
 ]
 
 setup(
     name='mercury_parser',
-    version='0.0.0',
+    version='0.1.1',
     description='Mercury Web Parser API Client.',
     long_description= '\n' + read('README.rst'),
     author='Kenneth Reitz',
