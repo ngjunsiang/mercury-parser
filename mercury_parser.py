@@ -37,7 +37,8 @@ class ParsedArticle(object):
             setattr(p, key, value)
 
         # Proper Datetimes.
-        p.date_published = maya.MayaDT.from_iso8601(p.date_published).datetime()
+        if p.date_published:
+            p.date_published = maya.MayaDT.from_iso8601(p.date_published).datetime()
 
         return p
 

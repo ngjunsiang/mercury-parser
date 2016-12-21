@@ -30,13 +30,13 @@ required = [
 
 setup(
     name='mercury_parser',
-    version='0.1.1',
+    version='0.1.2',
     description='Mercury Web Parser API Client.',
     long_description= '\n' + read('README.rst'),
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
     url='https://github.com/kennethreitz/mercury-parser',
-    py_modules=['maya'],
+    py_modules=['mercury_parser'],
     install_requires=required,
     license='MIT',
     classifiers=(
