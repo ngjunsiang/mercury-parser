@@ -28,7 +28,7 @@ Example Usage
     p.rendered_pages
     p.next_page_url
 
-That's basically it.
+That's basically it, other than ``p.next()``.
 
 
 Installation
