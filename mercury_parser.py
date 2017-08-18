@@ -33,8 +33,12 @@ class ParsedArticle(object):
         p = klass(parser=parser)
 
         # Add all values from returned JSON object to instance.
-        for key, value in d.iteritems():
-            setattr(p, key, value)
+        try:
+            for key, value in d.iteritems(): # Python 2
+                setattr(p, key, value)
+        except AttributeError:
+            for key, value in d.items(): # Python 3
+                setattr(p, key, value)
 
         # Proper Datetimes.
         if p.date_published:
