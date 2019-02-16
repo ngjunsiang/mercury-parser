@@ -59,11 +59,11 @@ class ParserAPI(object):
 
     def parse(self, url):
         url = '{0}{1}'.format(MERCURY_API, url)
-        headers = {'x-api-key': self.api_key}
-
+        headers={'User-Agent': None,
+        'Connection': None,
+        'Accept-Encoding': None,
+        'x-api-key': self.api_key,
+        'Content-Type': 'application/json'}
         r = self._session.get(url, headers=headers)
         p = ParsedArticle.from_dict(r.json(), parser=self)
         return p
-
-
-
